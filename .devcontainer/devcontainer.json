@@ -5,7 +5,8 @@
         "donjayamanne.githistory",
         "esbenp.prettier-vscode",
         "streetsidesoftware.code-spell-checker",
-        "Thinker.sort-json"
+        "Thinker.sort-json",
+        "usernamehw.errorlens"
       ],
       "settings": {
         "[javascript]": {
@@ -40,7 +41,7 @@
           "editor.defaultFormatter": "esbenp.prettier-vscode",
           "editor.formatOnSave": true
         },
-        "cSpell.words": ["icer", "devcontainers"],
+        "cSpell.words": ["icer", "devcontainers", "usernamehw", "errorlens"],
         "editor.rulers": [80],
         "typescript.inlayHints.enumMemberValues.enabled": true,
         "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
