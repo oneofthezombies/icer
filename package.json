@@ -1,0 +1,16 @@
+{
+  "name": "icer",
+  "private": true,
+  "description": "",
+  "scripts": {},
+  "author": "oneofthezombies",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "packageManager": "npm@10.9.2",
+  "volta": {
+    "node": "22.12.0",
+    "npm": "10.9.2"
+  }
+}

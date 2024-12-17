@@ -1,0 +1,14 @@
+services:
+  icer:
+    build:
+      context: ../
+      dockerfile: .devcontainer/Dockerfile
+    volumes:
+      - ../:/icer
+    networks:
+      - icer
+    restart: 'no'
+
+networks:
+  icer:
+    driver: bridge
