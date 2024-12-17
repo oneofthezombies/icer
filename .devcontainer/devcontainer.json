@@ -41,7 +41,7 @@
           "editor.defaultFormatter": "esbenp.prettier-vscode",
           "editor.formatOnSave": true
         },
-        "cSpell.words": ["icer", "devcontainers", "usernamehw", "errorlens"],
+        "cSpell.words": ["devcontainers", "errorlens", "icer", "usernamehw"],
         "editor.rulers": [80],
         "typescript.inlayHints.enumMemberValues.enabled": true,
         "typescript.inlayHints.functionLikeReturnTypes.enabled": true,

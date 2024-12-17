@@ -1,0 +1,8 @@
+{
+  "name": "@icer/path-match-gen",
+  "author": "oneofthezombies",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "22.10.2"
+  }
+}
