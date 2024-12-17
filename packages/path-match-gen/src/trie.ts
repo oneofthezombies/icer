@@ -40,36 +40,38 @@ Node { isEnd: false; children: {
  */
 
 const nodeKinds = ["character", "named-group"] as const;
-type NodeKind = (typeof nodeKinds)[number];
+type TrieNodeKind = (typeof nodeKinds)[number];
 
-class TrieNode {
-  kind: NodeKind;
+export type TrieNode = {
+  kind: TrieNodeKind;
   isEnd: boolean;
-  children: Map<string, TrieNode>;
+  children: Record<string, TrieNode | undefined>;
+};
 
-  constructor(kind: NodeKind) {
-    this.kind = kind;
-    this.isEnd = false;
-    this.children = new Map();
-  }
-}
-
-class Trie {
-  #root: TrieNode;
+export class Trie {
+  root: TrieNode;
 
   constructor() {
-    this.#root = new TrieNode("character");
+    this.root = {
+      kind: "character",
+      isEnd: false,
+      children: {},
+    };
   }
 
   insert(path: string): void {
-    let node = this.#root;
+    let node = this.root;
     let pos = 0;
 
-    const update = (nextPos: number, key: string, kind: NodeKind) => {
-      let nextNode = node.children.get(key);
+    const update = (nextPos: number, key: string, kind: TrieNodeKind) => {
+      let nextNode = node.children[key];
       if (!nextNode) {
-        nextNode = new TrieNode(kind);
-        node.children.set(key, nextNode);
+        nextNode = {
+          kind,
+          isEnd: false,
+          children: {},
+        };
+        node.children[key] = nextNode;
       }
       node = nextNode;
       pos = nextPos;
